@@ -10,3 +10,4 @@ For the Topic Modeling Modelling approach using OSM data, the next few files are
 
 Similarly the Topic Modelling approach is run for Wikipedia data. First the LDA model is performed using file kc_wiki_summary_lda_btm_new2.ipynb. The BTM model is run in BTM.R file and the results of BTM model are labelled and mapped in kc_wiki_summary_lda_btm_new2.ipynb file. The input for the first python file is the kc_wiki_with_summary.csv file obtained from kc_wiki data collection. The output is the result of modelling LDA and BTM. The BERTopic model is run on bertopic_wiki_summry_new.ipynb file. The code was run in google colab. The input file is the same as for the other two models (kc_wiki_with_summary.csv) . The output is the BERTopic functions from Wiki summary data.  
 
+Next the wiki+osm_kc_new.ipynb file is run. It uses the osm data and wiki data collected together as an input. It returns the combined functions from running BTM and BERTopic. 
