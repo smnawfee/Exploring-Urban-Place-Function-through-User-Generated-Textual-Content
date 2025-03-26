@@ -25,7 +25,6 @@ model = AutoModelForCausalLM.from_pretrained(
         model_name,
         token = token,
         torch_dtype=torch.bfloat16,
-        #quantization_config=bnb_config,
         device_map="auto",
         trust_remote_code=True)
         
@@ -45,7 +44,7 @@ generator = pipeline(
 
 #load dataset
 import pandas as pd
-kc_wiki_with_summary = pd.read_csv('R:/../../kc_wiki_dbscan_tag_llm_4.csv')
+kc_wiki_with_summary = pd.read_csv('R:/../../kc_wiki_dbscan_tag_llm.csv')
 document = kc_wiki_with_summary['page_summary']
 
 
@@ -116,7 +115,7 @@ def simple_model(text):
 kc_wiki_with_summary['llm_output'] = kc_wiki_with_summary['page_summary'].apply(simple_model)
 
 #save new dataframe
-kc_wiki_with_summary.to_csv('R:/../../kc_wiki_with_summary_output_phi_mini-1-b.csv')
+kc_wiki_with_summary.to_csv('R:/../../phi_mini-1-b_output.csv')
 
 
 
