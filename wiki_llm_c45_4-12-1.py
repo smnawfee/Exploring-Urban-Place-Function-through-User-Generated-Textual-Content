@@ -13,14 +13,7 @@ if torch.cuda.is_available():
 else:
     print('Run on CPU')
 
-from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, BitsAndBytesConfig
-
-#quantization (4-bit quantization with nf4 type configuration)
-bnb_config = BitsAndBytesConfig(
-    load_in_4bit=True,
-    bnb_4bit_quant_type="nf4",
-    bnb_4bit_use_double_quant=True,
-)
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
 #load tokenizer and model
 token = "hf_...."
@@ -32,7 +25,6 @@ model = AutoModelForCausalLM.from_pretrained(
         model_name,
         token = token,
         torch_dtype=torch.bfloat16,
-        quantization_config=bnb_config,
         device_map="auto",
         trust_remote_code=True)
         
@@ -52,7 +44,7 @@ generator = pipeline(
 
 #load dataset
 import pandas as pd
-kc_wiki_with_summary = pd.read_csv('R:../../kc_wiki_dbscan_tag_llm_4.csv')
+kc_wiki_with_summary = pd.read_csv('R:../../kc_wiki_dbscan_tag_llm.csv')
 
 
 
@@ -117,7 +109,7 @@ def simple_model(text):
 kc_wiki_with_summary['llm_output'] = kc_wiki_with_summary['page_summary'].apply(simple_model)
 
 #save new dataframe
-kc_wiki_with_summary.to_csv('R:/../../kc_wiki_with_summary_output_c45_4-12-1.csv')
+kc_wiki_with_summary.to_csv('R:/../../Mistral-7b_output.csv')
 
 
 
