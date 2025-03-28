@@ -9,5 +9,6 @@ This file requires an input of two different files.
 1. The borough boundary file of the Kensington and Chelsea. This file is available at  London Datastore (https://data.london.gov.uk/dataset/statistical-gis-boundary-files-london) under liscencing terms(https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/). From the list of files available in the website the file named  'statistical-gis-boundaries-london.zip' which is the boundary files for the 2011 census is extracted.
 From the dowloaded file, the file named 'London_Borough_Excluding_MHW.shp' is used as an input for wiki data collection
 3. The geotagged English Wikipedia article list
-This file is available in 
+This file is available in  Wikipedia data dump (https://meta.wikimedia.org/wiki/Data_dumps) which has the following license (https://meta.wikimedia.org/wiki/Meta:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License).
+The file is extracted as an sql. The following steps need to be follow to convert it to csv.
 
