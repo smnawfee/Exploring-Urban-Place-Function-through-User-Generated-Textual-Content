@@ -6,5 +6,5 @@ The downloading takes place in the following steps:
 
 B. Input file for kc_wiki_data_collection
 This file requires an input of two different files.
-i. The borough boundary file of the Kensington and Chelsea. This file is available at 
+1. The borough boundary file of the Kensington and Chelsea. This file is available at 
 
