@@ -6,5 +6,8 @@ The downloading takes place in the following steps:
 
 B. Input file for kc_wiki_data_collection
 This file requires an input of two different files.
-1. The borough boundary file of the Kensington and Chelsea. This file is available at 
+1. The borough boundary file of the Kensington and Chelsea. This file is available at  London Datastore (https://data.london.gov.uk/dataset/statistical-gis-boundary-files-london) under liscencing terms(https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/). From the list of files available in the website the file named  'statistical-gis-boundaries-london.zip' which is the boundary files for the 2011 census is extracted.
+From the dowloaded file, the file named 'London_Borough_Excluding_MHW.shp' is used as an input for wiki data collection
+3. The geotagged English Wikipedia article list
+This file is available in 
 
