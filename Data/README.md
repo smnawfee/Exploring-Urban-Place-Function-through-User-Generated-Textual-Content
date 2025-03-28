@@ -11,7 +11,17 @@ From the dowloaded file, the file named 'London_Borough_Excluding_MHW.shp' is us
 
 3. The geotagged English Wikipedia article list
 This file is available in  Wikipedia data dump (https://meta.wikimedia.org/wiki/Data_dumps) which has the following license (https://meta.wikimedia.org/wiki/Meta:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License). The file is extracted as an sql. The following steps need to be follow to convert it to csv. This part requires aaccess to MySQL.
-i. Download the data  enwiki-20201101-geo_tags.sql.gz.\ ii. Create an emty database in MySQL by selecting 'Create New Schema' button from the top bar, add a scema name and click apply and then close.\ iii. Connect to the database, from the Management section select Data Import/Restore.  iv. In Import options select Import from Self-Contained File Select the .sql file extracted from the archive downloaded from
-the Wikipedia repository.  v. Select the newly create schema (steps above) from the Default Target Schema dropdown menu.  vi. Click Start import  vii. From schema section on the left panel select the schema  created above (e.g., Wikipedia).  viii. Select Tables then the geo_tag table.  ix. Right-click and select Table Data Export Wizard.  x. Select the columns you want to exprot (all by default).  xi. Select where to save the file and the format (select , as file separator when using csv). Next.
+i. Download the data  enwiki-20201101-geo_tags.sql.gz.\
+ii. Create an emty database in MySQL by selecting 'Create New Schema' button from the top bar, add a scema name and click apply and then close.\
+iii. Connect to the database, from the Management section select Data Import/Restore.\
+iv. In Import options select Import from Self-Contained File Select the .sql file extracted from the archive downloaded from
+the Wikipedia repository.\
+v. Select the newly create schema (steps above) from the Default Target Schema dropdown menu.
+vi. Click Start import\
+vii. From schema section on the left panel select the schema  created above (e.g., Wikipedia).\
+viii. Select Tables then the geo_tag table.\
+ix. Right-click and select Table Data Export Wizard.\
+x. Select the columns you want to exprot (all by default).\
+xi. Select where to save the file and the format (select , as file separator when using csv).\
 xii. Click Next to execute
 
